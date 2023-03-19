@@ -49,6 +49,32 @@ span .title-ready {
     color: #f48c06;
 }
 
+.sign-up {
+    color: #03071e;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.sign-up:hover{
+    background: #f48c06;
+    transition: .5s;
+}
+
+.log-in {
+    color: #03071e;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.log-in:hover {
+    background: #f48c06;
+    transition: .5s;
+}
+
 /* NAVBAR --- END */
 
 /* HERO SECTION ----- START */
@@ -83,9 +109,7 @@ span .title-ready {
 
 /* BEST SELLER ----- START */
 
-.bestSeller{
-    /* margin-top: 8em; */
-}
+
 
 .bestSeller .card h5{
     color: #1C6758;
@@ -144,3 +168,15 @@ span .title-ready {
 .section-title {
     margin-top: 10em;
 }
+
+/* LOG IN PAGE CSS - START */
+
+.main-login {
+    margin-top: 10rem;
+}
+
+.row-log {
+    background: white;
+}
+
+/* LOG IN PAGE CSS - END */
