@@ -202,3 +202,8 @@ span .title-ready {
     border: 1px solid #03071e;
 }
 /* LOG IN PAGE CSS - END */
+
+/* PRODUCT CARD CSS */
+.card-text {
+    text-align: justify;
+}
