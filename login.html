@@ -22,6 +22,7 @@
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
     <!-- Customs CSS link -->
     <link rel="stylesheet" href="./style/style.css">
+    <script src="loginandsignup.js"></script>
     <title>CookReady</title>
 </head>
 
@@ -57,24 +58,25 @@
                 <div class="col-lg-7 px-5 pt-5">
                     <h1><span class="fw-bold">Cook<span class="title-ready">Ready</span></h1>
                     <h4>Sign into your account</h4>
-                    <form action="#">
+                    <form onsubmit="login(event)" action="#">
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" placeholder="UserName" class="form-control my-3 p-3" required>
+                                <input id="login-username" type="text" placeholder="UserName" class="form-control my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="password" placeholder="*********" class="form-control my-3 p-3" required>
+                                <input id="login-password" type="password" placeholder="*********" class="form-control my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="submit" class="btn1 mt-3 mb-5">Log in Now</button>
+                                <button value="Login" type="submit" class="btn1 mt-3 mb-5">Log in Now</button>
                             </div>
                         </div>
-                        <p class="fw-bold">Don't have an Account?<a href="#"> REGISTER NOW!</a></p>
+                        <p class="fw-bold">Don't have an Account?<a href="signup.html"> REGISTER NOW!</a></p>
                     </form>
+                    <div id="message"></div>
                 </div>
             </div>
         </div>

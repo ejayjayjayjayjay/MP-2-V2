@@ -22,6 +22,7 @@
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
     <!-- Customs CSS link -->
     <link rel="stylesheet" href="./style/style.css">
+    <script src="loginandsignup.js"></script>
     <title>CookReady</title>
 </head>
 
@@ -57,45 +58,38 @@
                 <div class="col-lg-7 px-5 pt-5">
                     <h1><span class="fw-bold">Cook<span class="title-ready">Ready</span></h1>
                     <h4>Create your account</h4>
-                    <form action="#">
+                    <form onsubmit="signup(event)" action="#">
                         <div class="row">
                             <div class="col-lg-6 mb-4">
-                                <input type="text" placeholder="Full Name" class="form-control form-control-lg 
+                                <input id="signup-username" type="text" placeholder="User Name" class="form-control form-control-lg 
                                 fs-6 border-0 shadow-sm" required>
                             </div>
                             <div class="col-lg-6 mb-4">
-                                <input type="email" placeholder="Email" class="form-control form-control-lg 
+                                <input id="signup-email" type="email" placeholder="Email" class="form-control form-control-lg 
                                 fs-6 border-0 shadow-sm" required>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <input type="text" placeholder="User Name" class="form-control form-control-lg 
-                                fs-6 border-0 shadow-sm" required>
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <input type="tel" placeholder="Mobile Number" class="form-control form-control-lg 
-                                fs-6 border-0 shadow-sm" required>
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 mb-4">
-                                <input type="password" placeholder="Password" class="form-control form-control-lg 
+                                <input id="signup-password" type="password" placeholder="Password" class="form-control form-control-lg 
                                 fs-6 border-0 shadow-sm" required>
                             </div>
                             <div class="col-lg-6 mb-4">
-                                <input type="password" placeholder="Confirm Password" class="form-control form-control-lg 
+                                <input id="signup-password" type="password" placeholder="Confirm Password" class="form-control form-control-lg 
                                 fs-6 border-0 shadow-sm" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="submit" class="btn1 mt-3 mb-5">Register Now</button>
+                                <button value="Signup" type="submit" class="btn1 mt-3 mb-5">Register Now</button>
                             </div>
                         </div>
                         <p class="fw-bold">Already have an Account?<a href="./login.html"> LOG IN NOW!</a></p>
                     </form>
+                    <div id="message"></div>
                 </div>
             </div>
         </div>

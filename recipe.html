@@ -30,12 +30,11 @@
             width: 30%;
             height: 50%;
         }
+        
     </style>
 </head>
 
 <body>
-
-
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main m-5" id="top">
@@ -66,16 +65,18 @@
 
 
 
-        <section class="text-center pt-5">
-            <div class="recipe-card container">
+    <section class="container-fluid text-center pt-5">
+        <div class="row">
+            <div class="recipe-card container w-25 d-inline">
                 <h1 class="mt-4 mb-4">Unlimited Recipe Checker! </h1>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="searchInput" placeholder="Search for recipes...">
+                  <input type="text" class="form-control col-md-12" id="searchInput" placeholder="Search for recipes...">
                 </div>
                 <button class="btn btn-primary" onclick="searchRecipes()">Search</button>
                 <div class="mt-4" id="recipeList"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
