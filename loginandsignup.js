@@ -12,7 +12,7 @@ function login(event) {
 		if(users[i].username == username){
 			if(users[i].password == password){
 				localStorage.setItem("loggedInUser", username);
-				window.location.replace("index.html");
+				window.location.replace("userdashboard.html");
 				return;
 			} else {
 				displayMessage("error", "Incorrect password!");
