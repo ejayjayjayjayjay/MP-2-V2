@@ -1,8 +1,4 @@
-
-if(localStorage.getItem("loggedInUser") != null){
-	window.location.replace("index.html");
-}
-
+// Login function
 function login(event) {
 	event.preventDefault();
 	let username = document.getElementById("login-username").value;
@@ -27,6 +23,7 @@ function login(event) {
 	displayMessage("error", "Username not found!");
 }
 
+// Signup function
 function signup(event) {
 	event.preventDefault();
 	let username = document.getElementById("signup-username").value;
@@ -48,6 +45,7 @@ function signup(event) {
 	displayMessage("success", "User registered successfully!");
 }
 
+// Display message function
 function displayMessage(type, message){
 	let messageDiv = document.getElementById("message");
 	messageDiv.innerHTML = message;
