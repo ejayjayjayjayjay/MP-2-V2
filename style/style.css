@@ -367,3 +367,32 @@ span .title-ready {
     margin: 40px auto 80px auto;
     font-size: 1em;
 }
+
+/* STAR RATING ---start */
+
+.star-widget input{
+    display: none;
+  }
+
+.star-widget label{
+    font-size: 18px;
+    color: #444;
+    padding: 10px;
+    float: center;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #1C6758;
+}
+
+input:checked ~ label{
+    color: #1C6758;
+}
+
+input#rate-5:checked ~ label{
+    color: #1C6758;
+}
+
+/* STAR RATING --- end */
