@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP CSS LINK -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS LINK -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- ICON LINK -->
+  <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
+  <!-- Customs CSS link -->
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="navbarmessage.js"></script>
+  <title>CookReady</title>
+</head>
+
+<body>
+
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="./index.html"><span class="fw-bold">Cook<span
+                class="title-ready">Ready</span></a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><i class="fas fa-bars fw-bold"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto pt-2 pt-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="./userproduct.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="./userdashboard.html">Cart</a></li>
+              <li class="nav-item"><a class="nav-link" id="navbar"
+                  href="./recipe.html">Recipe</a>
+              </li>
+            </ul>
+            <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0" type="button">Login</a>
+            <a href="./signup.html" class="sign-up btn rounded-pill order-0" type="submit">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="product-container container content-section">
+        <h2 class="section-header">AVAILABLE MEALS</h2>
+        <div class="product-container container shop-meals">
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Pork Adobo</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/adobo.png">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">350</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Afritada</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/afritadaCircle.png">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">350</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Chopsuey</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/chopsueyCircle.png">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">250</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Lumpia</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/lumpiaCircle.png">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">250</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Pork Sisig</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/porksisigCircle.png">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">270</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+          <div class="card shop-meal">
+            <div class="card">
+              <div class="card-body text-center bg-warning">
+                <h3 class="card-title"><span class="shop-meal-title">Menudo</span></h3>
+                <img class="shop-meal-image img-fluid" src="./images/menudo.jpg">
+                <div class="shop-meal-details">
+                  <div class="star-widget">
+                    <input type="radio" name="rate" id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate-1">
+                    <label for="rate-1" class="fas fa-star"></label>
+                  </div>
+                  <p class="fw-bold fs-5">Meal Price:</p>
+                  <span class="shop-meal-price">450</span>
+                  <p class="text-muted">3-4 persons per order</p>
+                  <a href="#">
+                    <p>Click Here for Meal Details</p>
+                  </a>
+                </div>
+                <button class="btn btn-success shop-meal-button rounded-pill" type="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+      </section>
+
+      <section class="product-container container content-section">
+        <h2 class="section-header">TOTAL AMOUNT OF ORDER</h2>
+        <div class="cart-row">
+          <span class="cart-meal cart-header cart-column">MEAL</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-meals">
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">₱0</span>
+        </div>
+        <button class="btn btn-success btn-purchase rounded-pill" type="button">PLACE ORDER</button>
+      </section>
+
+
+
+
+
+      <!-- footer <section> begin ============================-->
+      <section class="bg-200 pt-9 pb-0">
+        <div class="container mt-5">
+          <div class="row">
+            <hr class="opacity-25" />
+            <div class="text-400 text-center">
+              <p class="text-400 my-3">&copy; 2023 <span class="fw-bold">Cook<span class="title-ready">Ready</span></p>
+
+              <p class="my-3"><span class="fw-bold">Cook<span class="title-ready">Ready</span> is a ready-to-cook
+                  e-commerce website<br />that offers meals kit and recipe boxes</p>
+              <div class="social-links">
+                <a href="https://www.facebook.com/Lordejay/" class="text-primary me-2"><i
+                    class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ejayvibar/?fbclid=IwAR1SNefXCE9Y0vuAasnqiCvMqyE2c16gx2lziSIJ6OEQDR1wG08j7bVqINg"
+                  class="text-danger me-2"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/feed/" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ejayjayjayjayjay" class="text-dark me-2"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+      </section><!-- footer <section> close ============================-->
+      <!-- ============================================-->
+
+    </main>>
+
+    <script src="./product.js"></script>
+
+    <!-- BOOTSTRAP JS BUNDLE -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <!-- modal js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+
+    <!-- AOS JS LINK -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
