@@ -50,3 +50,5 @@ function displayMessage(type, message){
 	messageDiv.style.color = (type == "success") ? "green" : "red";
 }
 
+
+
