@@ -22,6 +22,7 @@
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
     <!-- Customs CSS link -->
     <link rel="stylesheet" href="./style/style.css">
+    
     <title>CookReady</title>
 </head>
 
@@ -62,37 +63,7 @@
     </section>
    
     <!-- login -->
-
-
-
     </main>
-
-
-
-    
-
-
-
-
-    <script>
-        const adminUsername = "admin";
-const adminPassword = "1234";
-
-const loginForm = document.getElementById("login-form");
-loginForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const enteredUsername = document.getElementById("admin-username").value;
-  const enteredPassword = document.getElementById("admin-password").value;
-
-  if (enteredUsername === adminUsername && enteredPassword === adminPassword) {
-    window.location.href = "./admindashboard.html";
-  } else {
-    alert("Invalid username or password");
-  }
-});
-    </script>
-
     <!-- BOOTSTRAP JS BUNDLE -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -111,7 +82,7 @@ loginForm.addEventListener("submit", function(event) {
         crossorigin="anonymous"></script>
 
     <!-- AOS JS LINK -->
-
+    <script src="adminlogin.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
