@@ -48,39 +48,32 @@ let DrawUI;
 
 let container = [...addedItems];
 function addedItem(id){
-    if(_username)
-    {
-        // products = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : products;
-        let element = products.find(item => item.id == id);
-        let item = container.find(el => el.id === element.id);
-        console.log(item);
+    products = localStorage.getItem("products") ? JSON.parse(localStorage.getItem("products")) : products;
+    let element = products.find(item => item.id == id);
+    let item = container.find(el => el.id === element.id);
+    console.log(item);
 
-        if(item){
-            item.quantity += 1;
-        }else{
-            container.push(element);
-        }
-
-        cartproductsDom.innerHTML = "";
-        container.map(item => {
-            cartproductsDom.innerHTML += `<p>${item.title} <span class='item-qty'>${item.quantity}</span></p>`;
-        })
-
-        addedItems = [...addedItems , element];
-        let uniqueCartProducts = uniqueProductsSendToCart(addedItems,"id")
-
-        localStorage.setItem("productsInCart",JSON.stringify(uniqueCartProducts));
-
-        let cartproductsLength = document.querySelectorAll('.cartproducts p');
-        notificationNumber.innerHTML = cartproductsLength.length;
-        
-        showNotify();
+    if(item){
+        item.quantity += 1;
+    }else{
+        container.push(element);
     }
-    else{
-        window.location = "login.html";
-    }
+
+    cartproductsDom.innerHTML = "";
+    container.map(item => {
+        cartproductsDom.innerHTML += `<p>${item.title} <span class='item-qty'>${item.quantity}</span></p>`;
+    })
+
+    addedItems = [...addedItems , element];
+    let uniqueCartProducts = uniqueProductsSendToCart(addedItems,"id")
+
+    localStorage.setItem("productsInCart",JSON.stringify(uniqueCartProducts));
+
+    let cartproductsLength = document.querySelectorAll('.cartproducts p');
+    notificationNumber.innerHTML = cartproductsLength.length;
+
+    showNotify();
 }
-
 
 function productdetails(id){
     localStorage.setItem("productId",id);
