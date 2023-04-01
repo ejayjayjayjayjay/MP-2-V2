@@ -42,6 +42,8 @@ function signup(event) {
 	users.push(user);
 	localStorage.setItem("users", JSON.stringify(users));
 	alert("User registered successfully!");
+	window.location.replace("login.html");
+	return;
 }
 
 function displayMessage(type, message){
