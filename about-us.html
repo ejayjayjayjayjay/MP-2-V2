@@ -21,10 +21,14 @@
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
     <!-- Customs CSS link -->
     <link rel="stylesheet" href="./style/style.css">
-    <script src="navbarmessage.js"></script>
+    <script src="JS-alertmessages/navbarmessage.js"></script>
     <title>CookReady</title>
 </head>
 <body>
+
+    <div class="preloader-wrapper">
+		<object class="preloader-svg" data="./images/loading.svg" type="image/svg+xml"></object>
+	</div>
 
     <main class="main" id="top">
         <nav class="navbar navbar-expand-lg fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
@@ -185,9 +189,7 @@
           <!-- ============================================-->
 
       </main>
-
        <!-- BOOTSTRAP JS BUNDLE -->
-
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
      crossorigin="anonymous"></script>
@@ -204,11 +206,9 @@
      crossorigin="anonymous"></script>
 
  <!-- AOS JS LINK -->
-
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script>
      AOS.init();
  </script>
-    
 </body>
 </html>

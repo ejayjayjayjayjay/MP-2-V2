@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
+/* PRELOADER */
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EEF2E6;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preloader-svg {
+    width: 100px;
+    height: 100px;
+    animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.hide {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 2.3s ease-in-out;
+}
+
+ /* PRELOADER END */
+
 * {
     margin: 0;
     padding: 0;
