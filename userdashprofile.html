@@ -47,8 +47,8 @@
                     <ul class="navbar-nav mx-auto pt-2 pt-lg-0">
                         <li class="nav-item"><a class="nav-link" href="./userfinishlogin.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./userproduct.html">Products</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="./usercart.html">Cart</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./userdashprofile.html">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./usercart.html">Cart</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./userdashprofile.html">Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="./recipe.html">Recipe</a></li>
                     </ul>
                     <a href="./index.html" class="sign-up btn rounded-pill order-0" type="submit"><span id="displayField">NAME</span></a>
@@ -56,53 +56,60 @@
             </div>
         </nav>
 
-
-
-        <section class="home">
-            <div class="container-cart container">
-                <div class="products">
-
-                </div>
-            </div>
-
-        </section>
-
-        <!-- footer <section> begin ============================-->
-        <section class="bg-200 pt-9 pb-0">
-            <div class="container mt-5">
-                <div class="row">
-                    <hr class="opacity-25" />
-                    <div class="text-400 text-center">
-                        <p class="text-400 my-3">&copy; 2023 <span class="fw-bold">Cook<span
-                                    class="title-ready">Ready</span></p>
-
-                        <p class="my-3"><span class="fw-bold">Cook<span class="title-ready">Ready</span> is a
-                                ready-to-cook e-commerce website<br />that offers meals kit and recipe boxes</p>
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/Lordejay/" class="text-primary me-2"><i
-                                    class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/ejayvibar/?fbclid=IwAR1SNefXCE9Y0vuAasnqiCvMqyE2c16gx2lziSIJ6OEQDR1wG08j7bVqINg"
-                                class="text-danger me-2"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/feed/" class="text-primary me-2"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/ejayjayjayjayjay" class="text-dark me-2"><i
-                                    class="fab fa-github"></i></a>
+                <div class="container">
+                    <h3 class="text-dark mb-4">Profile</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-12">
+                            <div class="card mb-3">
+                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" id="profile-pic" src="./images/image2.jpeg" alt="Profile Picture" width="160" height="160">
+                                    <div class="mb-3 text-center"><input type="file" id="pic-upload" accept="image/*" onchange="uploadProfilePic(this)"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div><!-- end of .container-->
-        </section><!-- footer <section> close ============================-->
-        <!-- ============================================-->
-    </main>
 
+                            <div>  
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold">User Settings</p>
+                                    </div>
+                                        <form>
+                                                <div class="col">
+                                                    <div class="mb-3"><label class="form-label" for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" id="first-name" placeholder="Enter your first name" name="first-name" oninput="saveDetails2()"></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="mb-3"><label class="form-label" for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" id="last-name" placeholder="Enter your last name" name="last_name" oninput="saveDetails2()"></div>
+                                                </div>
+                                        </form>
+                                    </div>
 
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold">Contact Settings</p>
+                                    </div>
+                                    <div>
+                                        <form>
+                                            <div class="mb-3"><label class="form-label" for="address"><strong>Address</strong></label><input class="form-control" type="text" id="address" placeholder="Enter your address" name="address" oninput="saveDetails()"></div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="mb-3"><label class="form-label" for="city"><strong>City</strong></label><input class="form-control" type="text" id="city" placeholder="Enter your city" name="city" oninput="saveDetails()"></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="mb-3"><label class="form-label" for="country"><strong>Country</strong></label><input class="form-control" type="text" id="country" placeholder="Enter your country" name="country" oninput="saveDetails()"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3" id="saved-details"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
+                                        </form>
+                                    </div>
+
+                            </div>  
+
+    </main>               
     <script src="./JS-product/cartmenu.js"></script>
     <script src="./JS-product/carts.js"></script>
 
 
 
     <!-- BOOTSTRAP JS BUNDLE -->
-
+    <script src="JS-admindashboard/admindashboarduserfunct.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
