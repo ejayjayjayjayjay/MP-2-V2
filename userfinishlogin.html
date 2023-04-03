@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- ICON LINK -->
+    <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
+    <!-- Customs CSS link -->
+    <link rel="stylesheet" href="style/style.css">
+    <script src="./JS-signinandsignup/displayvalue.js"></script>
+    <script src="./JS-alertmessages/navbarmessage.js"></script>
+    <title>CookReady</title>
+</head>
+
+<body onload="displayValue()">
+
+  <div class="preloader-wrapper">
+		<object class="preloader-svg" data="./images/loading.svg" type="image/svg+xml"></object>
+	</div>
+
+   <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="./index.html"><span class="fw-bold">Cook<span class="title-ready">Ready</span></a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars fw-bold"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto pt-2 pt-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="./userfinishlogin.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./userproduct.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="./usercart.html">Cart</a></li>
+              <li class="nav-item"><a class="nav-link" href="./usercart.html">Profile</a></li>
+              <li class="nav-item"><a class="nav-link" id="navbar" href="./recipe.html">Recipe</a></li>
+            </ul>
+            <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0" type="button"><span id="displayField">NAME</span></a>
+          </div>
+        </div>
+    </nav>
+        
+        <section class="" id="home">
+            <div class="container-lg">
+                <div class="row mt-5 align-item-center align-content-center">
+                    <div class="col-md-6 mt-5 mt-md-0" data-aos="fade-left" data-aos-duration="3000">
+                        <div class="home-img text-center">
+                            <img src="./images/food-3-modified.png" class="mw-100" alt="profile_img">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0 order-md-first" data-aos="fade-right" data-aos-duration="3000">
+                        <div class="home-text px-5">
+                            <h1 class="fw-medium fs-2 mt-5">Giving your Hunger a new Option.<br />easy with <span class="fw-bold">Cook<span class="title-ready">Ready</span></span>.</h1>
+                            <p class="mt-3 mb-4">Let’s cook up some healthy and delicious meals together!</p>
+                            <a class="btn-hero btn btn-lg hover-top btn-glow" href="./product.html">Check Meals Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="bestSeller py-5" id="bestSeller">
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center">
+                            <h2 class="fw-bold mb-5">Best Seller</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                     
+                    <div class="card">
+                        <img src="./images/menudo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Menudo</h5>
+                          <p class="card-text fw-bold text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Recipe/Ingredients</a>
+                        </div>
+                      </div>
+
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    
+                    <div class="card">
+                        <img src="./images/sinigang-baboy.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Sinigang na baboy</h5>
+                          <p class="card-text fw-bold text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Recipe/Ingredients</a>
+                        </div>
+                      </div>
+                    
+
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-left">
+                    <div class="card">
+                        <img src="./images/sinigang-hipon.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Sinigang na Hipon</h5>
+                          <p class="card-text fw-bold text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Recipe/Ingredients</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        
+        
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+  
+  
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="comments py-7">
+          <div class="container mt-5">
+            <div class="row flex-center">
+              <div class="col-md-8 col-lg-5 text-center">
+                <h2>Customer's Review</h2>
+                <p>These are the reviews of our customers who have tried our services when using this Website.</p>
+              </div>
+            </div>
+            <div class="carousel slide pt-6" id="carouselExampleDark" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                  <div class="row h-100">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-1.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-1</h6>
+                                <p class="fs--2 fw-normal mb-0">Las Piñas</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“Wow...I am very happy, it turned out to be more than my expectations and so far there have been no problems. CookReady always the best”.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-2.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-2</h6>
+                                <p class="fs--2 fw-normal mb-0">Bacoor, Cavite</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“I like it because I like to cook and eat. and faster DELIVERY!!”</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-3.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-3</h6>
+                                <p class="fs--2 fw-normal mb-0">Ermita, Manila</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.8</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">"Smooth Transaction”.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="row h-100">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-4.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-4</h6>
+                                <p class="fs--2 fw-normal mb-0">Bacoor, Cavite</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“Wow...I am very happy, it turned out to be more than my expectations and so far there have been no problems. CookReady always the best”.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-1.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-5</h6>
+                                <p class="fs--2 fw-normal mb-0">Ermita, Manila</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“I like it because I like to cook and eat. and faster DELIVERY!!”</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-2.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-6</h6>
+                                <p class="fs--2 fw-normal mb-0">Las piñas</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.8</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">"Smooth Transaction”.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row h-100">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-3.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-7</h6>
+                                <p class="fs--2 fw-normal mb-0">Bacoor, Cavite</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“Wow...I am very happy, it turned out to be more than my expectations and so far there have been no problems. CookReady always the best”.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-4.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-7</h6>
+                                <p class="fs--2 fw-normal mb-0">Ermita, Manila</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">5</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">"Smooth Transaction”.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center"><img class="img-fluid" src="./images/user-3.png" alt="" />
+                              <div class="flex-1 ms-3">
+                                <h6 class="mb-0 fs--1 text-1000 fw-bold">Customer-8</h6>
+                                <p class="fs--2 fw-normal mb-0">Las Piñas</p>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center"><span class="text-900 me-3">4.8</span><svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FEA250" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"> </path>
+                              </svg></div>
+                          </div>
+                          <p class="card-text pt-3 fw-bold text-muted">“I like it because I like to cook and eat. and faster DELIVERY!!”</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row px-3 px-md-0 mt-4">
+                <div class="col-3 position-relative">
+                  <ol class="carousel-indicators">
+                    <li class="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"></li>
+                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                  </ol>
+                </div>
+                <div class="col-6 position-relative">
+                    <a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a>
+                    <a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+        <!-- ============================================-->
+
+  
+        <!-- ============================================-->
+        <!-- footer <section> begin ============================-->
+        <section class="bg-200 pt-9 pb-0">
+          <div class="container mt-5">
+            <div class="row">
+              <hr class="opacity-25" />
+              <div class="text-400 text-center">
+                <p class="text-400 my-3">&copy; 2023 <span class="fw-bold">Cook<span class="title-ready">Ready</span></p>
+
+                <p class="my-3"><span class="fw-bold">Cook<span class="title-ready">Ready</span> is a ready-to-cook e-commerce website<br />that offers meals kit and recipe boxes</p>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/Lordejay/" class="text-primary me-2"><i
+                          class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/ejayvibar/?fbclid=IwAR1SNefXCE9Y0vuAasnqiCvMqyE2c16gx2lziSIJ6OEQDR1wG08j7bVqINg"
+                      class="text-danger me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/feed/" class="text-primary me-2"><i
+                          class="fab fa-linkedin"></i></a>
+                  <a href="https://github.com/ejayjayjayjayjay" class="text-dark me-2"><i
+                          class="fab fa-github"></i></a>
+              </div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+        </section><!-- footer <section> close ============================-->
+        <!-- ============================================-->
+  
+      </main><!-- ===============================================-->
+      <!--    End of Main Content-->
+      <!-- ===============================================-->
+
+      <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "120435797644330");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+        <!-- BOOTSTRAP JS BUNDLE -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+        <!-- modal js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+
+        <!-- AOS JS LINK -->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+</html>

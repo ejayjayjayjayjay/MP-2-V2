@@ -21,6 +21,7 @@
     <!-- ICON LINK -->
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="./JS-signinandsignup/displayvalue.js"></script>
     <script src="./JS-alertmessages/navbarmessage.js"></script>
     <!-- Customs CSS link -->
     <title>CookReady</title>
@@ -30,7 +31,7 @@
     <object class="preloader-svg" data="./images/loading.svg" type="image/svg+xml"></object>
 </div>
 
-<body>
+<body onload="displayValue()">
 
 
     <!--    Main Content-->
@@ -44,12 +45,13 @@
                     aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars fw-bold"></i></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto pt-2 pt-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./userfinishlogin.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="./userproduct.html">Products</a></li>
                         <li class="nav-item"><a class="nav-link active" href="./usercart.html">Cart</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./usercart.html">Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="./recipe.html">Recipe</a></li>
                     </ul>
-                    <a href="./loginadmin.html" class="log-in btn rounded-pill order-first order-lg-0" type="button">Admin</a>
-                    <a href="./index.html" class="sign-up btn rounded-pill order-0" type="submit">logout</a>
+                    <a href="./index.html" class="sign-up btn rounded-pill order-0" type="submit"><span id="displayField">NAME</span></a>
                 </div>
             </div>
         </nav>
