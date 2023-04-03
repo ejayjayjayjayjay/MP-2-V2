@@ -1,4 +1,3 @@
-
 function login(event) {
 	event.preventDefault();
 	let username = document.getElementById("login-username").value;
@@ -8,10 +7,12 @@ function login(event) {
 		alert("No users found, please sign up!");
 		return;
 	}
+	var inputVal = document.getElementById("login-username").value;
 	for(let i=0; i<users.length; i++){
 		if(users[i].username == username){
 			if(users[i].password == password){
 				localStorage.setItem("loggedInUser", username);
+				localStorage.setItem("inputValue", inputVal)
 				window.location.replace("userfinishlogin.html");
 				return;
 			} else {
