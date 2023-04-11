@@ -13,6 +13,8 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- AOS LINK -->
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +53,15 @@
                         <li class="nav-item"><a class="nav-link active" href="./userdashprofile.html">Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="./recipe.html">Recipe</a></li>
                     </ul>
-                    <a href="./index.html" class="sign-up btn rounded-pill order-0" type="submit"><span id="displayField">NAME</span></a>
+                    <div class="dropdown">
+                        <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0 btn dropdown-toggle" type="button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="displayField">NAME</span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./userdashprofile.html">Profile</a>
+                        <a class="dropdown-item" href="./userproduct.html">Product</a>
+                        <a class="dropdown-item" href="./usercart.html">Cart</a>
+                        <a class="dropdown-item" href="./recipe.html">Recipe</a>
+                        <a class="dropdown-item" href="index.html">Logout</a>
+                    </div>
                 </div>
             </div>
         </nav>

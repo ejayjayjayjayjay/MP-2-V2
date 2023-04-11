@@ -47,7 +47,16 @@
               <li class="nav-item"><a class="nav-link" href="./userdashprofile.html">Profile</a></li>
               <li class="nav-item"><a class="nav-link" id="navbar" href="./recipe.html">Recipe</a></li>
             </ul>
-            <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0" type="button"><span id="displayField">NAME</span></a>
+              <div class="dropdown">
+                  <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0 btn dropdown-toggle" type="button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="displayField">NAME</span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./userdashprofile.html">Profile</a>
+                  <a class="dropdown-item" href="./userproduct.html">Product</a>
+                  <a class="dropdown-item" href="./usercart.html">Cart</a>
+                  <a class="dropdown-item" href="./recipe.html">Recipe</a>
+                  <a class="dropdown-item" href="index.html">Logout</a>
+                </div>
+              </div>
           </div>
         </div>
     </nav>
