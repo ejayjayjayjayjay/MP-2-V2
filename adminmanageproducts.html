@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
-    <script src="./Firebase JS-livechat/firebaselivechatjosell.js"></script>    
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -136,6 +136,8 @@ span {
 #clear-btn:hover {
   background-color: #c82333;
 }
+
+
     </style>
 </head>
 
@@ -148,12 +150,12 @@ span {
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="admindashboardjosell.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminprofilosell.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="admindashboardmark.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminprofilemark.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminlivechatjosell.html"><i class="fas fa-user"></i><span>Team LiveChat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminmanageproducts.html"><i class="fas fa-user"></i><span>Manage Products</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminmanageproducts.html"><i class="fas fa-user" active></i><span>Manage Products</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmanageorders.html"><i class="fas fa-user"></i><span>Manage Orders</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminmanageusers.html"><i class="fas fa-user"></i><span>Manage Accounts</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-user"></i><span>Manage Accounts</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -201,7 +203,7 @@ span {
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Josell</span><img class="border rounded-circle img-profile" src="./images/avatar1.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Mark Joeneil</span><img class="border rounded-circle img-profile" src="./images/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
@@ -210,24 +212,41 @@ span {
                         </ul>
                     </div>
                 </nav>
+                <!----------MANAGE PRODUCTS------------>
                 <section>
-                    <div>
-                        <h1 class="text-center">Team Live Chat</h1>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div id="chat-display">
-                                <!-- chat messages will be displayed here -->
-                              </div>
-                              <form id="chat-form">
-                                <input type="text" id="name-input" placeholder="Your name" value="Josell" disabled>
-                                <input type="text" id="message-input" placeholder="Type your message">
-                                <button type="submit">Send</button>   <button id="clear-btn">Clear</button>
-                              </form>
-                              
-                        </div>
-                    </div>
-                </section>
+                    <h1>Products</h1>
+                    <div id="management_food_box" class="col-12 bg-white mt-0" style="height: 50px; display: none;">
+            <p class="font-weight-bold" style="font-size: 130%;margin-top: -5px">PRODUCTS</p>
+            <div id="input_food2" style="display: none">
+            <div  class="row m-0 shadow-sm pt-3" >
+              <div class="col-3">
+                <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input type="text" class="form-control" id="foodAddNameInput"  placeholder=""> 
+                <input class="float-right" type="text" id="txtId" name="txtPrice" style="border:0; border-radius: 10px;height: 40px;background:#f8fafd;width:100%;outline: none;display: none;">
+            </div>
+              </div>
+              <div class="col-3" style="height: 100px;">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Details</label>
+                    <input type="email" class="form-control" id="foodAddNoteInput" placeholder="">
+                </div>
+              </div>
+              <div class="col-3" style="height: 100px;">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Price</label>
+                    <input type="number" class="form-control" id="foodAddPriceInput" placeholder=""> 
+                </div>
+              </div>
+                
+              <div class="col-3 p-0 pt-3 pl-3" style="height: 100px;">
+                <div class="btn btn-rounded waves-effect btn-sm" style="border-radius: 10px;width: 90%;background: #86c232">
+      <span class="text-white">Choose Image</span>
+      <input class="text-white" type="file" type="file" name="file" id="foodAddImageInput" >
+    </div>
+</section>
+                  
+                  
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -235,6 +254,6 @@ span {
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="./Firebase JS-livechat/firebaselivechatjosell.js"></script>
+    <script src="./Firebase JS-livechat/firebaselivechatmark.js"></script>
 </body>
 </html>
