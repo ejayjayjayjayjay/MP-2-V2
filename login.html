@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="./style/style.css">
     <script src="./JS-signinandsignup/loginandsignup.js"></script>
     <script src="./JS-alertmessages/navbarmessage.js"></script>
-    <script src="./JS-signinandsignup/transferusername.js"></script>
     <title>CookReady</title>
 </head>
 
@@ -67,17 +66,17 @@
                     <form onsubmit="login(event)">
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input id="login-username" type="text" placeholder="UserName" class="form-control my-3 p-3" required>
+                                <input id="login-username" type="text" placeholder="UserName" class="adminUser form-control my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input id="login-password" type="password" placeholder="*********" class="form-control my-3 p-3" required>
+                                <input id="login-password" type="password" placeholder="*********" class="adminPassword form-control my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button onclick="transferValue()" value="Login" type="submit" class="btn1 mt-3 mb-5">Log in Now</button>
+                                <button value="Login" type="submit" class="btn1 mt-3 mb-5">Log in Now</button>
                             </div>
                         </div>
                         <p class="fw-bold">Don't have an Account?<a href="signup.html"> REGISTER NOW!</a></p>
