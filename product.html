@@ -22,10 +22,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <!-- ICON LINK -->
   <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
+  <title>CookReady</title>
   <!-- Customs CSS link -->
   <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <script src="./JS-alertmessages/navbarmessage.js"></script>
-  <title>CookReady</title>
+  <script src="./JS-product/products.js" async></script>
 </head>
 
 <body>
@@ -34,7 +36,6 @@
 		<object class="preloader-svg" data="./images/loading.svg" type="image/svg+xml"></object>
 	</div>
 
-  <main class="main" id="top">
     <nav class="navbar navbar-expand-lg fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
       <div class="container"><a class="navbar-brand" href="./index.html"><span class="fw-bold">Cook<span
               class="title-ready">Ready</span></a>
@@ -50,44 +51,138 @@
             <li class="nav-item"><a class="nav-link" id="navbar" onclick="signInFirst()" href="./login.html">Recipe</a>
             </li>
           </ul>
-          <ul id="user_info">
-            <li class="notify">
-              <!-- <i class="shop-i fas fa-cart-plus"></i> -->
-              <i class="h2 bi-cart3"></i>
-              <span class="position-absolute top-0 start-100 translate-middle p-2 badge rounded-pill bg-danger"></span>
-              <div class="cartmenu">
-                <div class="cartproducts"></div>
-                <a class="cartbtn" href="cart.html">view all cart products</a>
-              </div>
-            </li>
-          </ul>
           <div class="log_reg">
             <a href="./login.html" class="log-in btn rounded-pill order-first order-lg-0" type="button">Login</a>
             <a href="./signup.html" class="sign-up btn rounded-pill order-0" type="submit">Sign Up</a>
           </div>
         </div>
       </div>
+       <!--CART-->
+       <div id="cart-info" class="nav-info cart-info">
+        <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+        <p><span id="item-count">0 </span> items
+        </p>
+      </div>
+  
+      <section class="cart" id="cart">
+        <h1 class="section-header">CART</h1>
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">MEAL</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">₱0</span>
+        </div>
+  
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      </section>
+  
     </nav>
 
-    <section class="home">
-      <div class="container-prod container">
-        <label for="search"></label>
-        <input type="text" id="search" placeholder="Search By Title" />
-        <div class="merge">
-          <div class="products"></div>
-          <div class="filter-dom">
-            <h2 class="filter-header">Filter By Meal Type :</h2>
-            <select aria-label="filterSize" id="filter-by-size">
-              <option value="" hidden>Select Type</option>
-              <option value="All">All</option>
-              <option value="Pork">Pork</option>
-              <option value="Beef">Beef</option>
-              <option value="Chicken">Chicken</option>
-            </select>
+    <div class="main-container">
+      <P class="title">Available Meals</P>
+    </div>
+  
+  
+    <div id="filterButtons">
+      <button class="btn active" onclick="filterSelection('all')">All</button>
+      <button class="btn" onclick="filterSelection('Pork')">Pork</button>
+      <button class="btn" onclick="filterSelection('Beef')">Beef</button>
+      <button class="btn" onclick="filterSelection('Chicken')">Chicken</button>
+    </div>
+  
+  
+    <section class="container">
+      <div class="products row">
+  
+        <div class="product Pork card col-md-6 col-sm-6">
+          <img src="./images/porkadobo.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">Pork Adobo</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product1.html">More Details</a></p>
+            <h3 class="product__price">₱380</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
           </div>
+  
+  
         </div>
+
+        <div class="product Beef card col-md-6 col-sm-6">
+          <img src="./images/beefCaldereta.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">Beef Caldereta</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product2.html">More Details</a></p>
+            <h3 class="product__price">₱480</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+  
+  
+        </div>
+
+        <div class="product Chicken card col-md-6 col-sm-6">
+          <img src="./images/afritada.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">Afritada</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product3.html">More Details</a></p>
+            <h3 class="product__price">₱350</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+  
+  
+        </div>
+
+        <div class="product Pork card col-md-6 col-sm-6">
+          <img src="./images/menudo.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">menudo</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product4.html">More Details</a></p>
+            <h3 class="product__price">₱280</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+  
+  
+        </div>
+
+        <div class="product Pork card col-md-6 col-sm-6">
+          <img src="./images/lumpia.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">Lumpia</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product5.html">More Details</a></p>
+            <h3 class="product__price">₱250</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+  
+  
+        </div>
+
+        <div class="product Beef card col-md-6 col-sm-6">
+          <img src="./images/beef-pares.jpg" class="product__image card-img-top">
+          <div class="shop-item-details card-body text-center">
+            <h5 class="product-title card-title">Beef-pares</h5>
+            Servings: 3-4 person per order
+            <p><a href="./productDetails/product6.html">More Details</a></p>
+            <h3 class="product__price">₱360</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+  
+  
+        </div>
+        
       </div>
     </section>
+
+    
+
+
 
     <!-- footer <section> begin ============================-->
     <section class="bg-200 pt-9 pb-0">
@@ -112,11 +207,53 @@
     </section><!-- footer <section> close ============================-->
     <!-- ============================================-->
 
-  </main>
-  <script src="./JS-product/check_user.js"></script>
-  <script src="./JS-product/products.js"></script>
-  <script src="./JS-product/cartmenu.js"></script>
-  <script src="./JS-product/script.js"></script>
+
+
+  <script>
+    filterSelection('all')
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("product");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arrl, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("filterButtons");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+  
 
   <!-- BOOTSTRAP JS BUNDLE -->
 
