@@ -74,7 +74,15 @@
       </div>
   
       <section class="cart" id="cart">
-        <h1 class="section-header">CART</h1>
+        <div class="row">
+          <div class="col-sm-10">
+            <h1 class="section-header">CART</h1>
+          </div>
+          <div class="col-sm-2">
+            <button class="close-cart btn"><i class="fas fa-window-close"></i></button>
+          </div>
+        </div>
+        
         <div class="cart-row">
           <span class="cart-item cart-header cart-column">MEAL</span>
           <span class="cart-price cart-header cart-column">PRICE</span>
@@ -82,13 +90,12 @@
         </div>
         <div class="cart-items">
         </div>
-        <ul id="purchase-lists">
-          <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">₱0</span>
-          </div>
-        </ul>
-        <button class="btn btn-primary btn-purchase ADD_TO_PURCHASE" type="button">PURCHASE</button>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">₱0</span>
+        </div>
+  
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
       </section>
   
     </nav>
