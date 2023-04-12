@@ -1,10 +1,22 @@
 function sendMail() {
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
+  
+    // check if required fields are not empty
+    if (fname === "" || lname === "" || email === "" || message === "") {
+      alert("Please fill in all required fields.");
+      return;
+    }
+  
     var params = {
-      fname: document.getElementById("fname").value,
-      lname: document.getElementById("lname").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      message: document.getElementById("message").value,
+      fname: fname,
+      lname: lname,
+      email: email,
+      phone: phone,
+      message: message,
     };
   
     const serviceID = "service_ddfwf5j";
@@ -23,4 +35,3 @@ function sendMail() {
       })
       .catch((err) => console.log(err));
   }
-  
