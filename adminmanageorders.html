@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="icon" href="./images/cookready3.ico" type="image/icon type">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
 
@@ -135,10 +136,35 @@ span {
 #clear-btn:hover {
   background-color: #c82333;
 }
+
+#purchase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each list item */
+#purchase-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style for the delete button */
+.delete-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
     </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="displayCartData()">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
@@ -150,7 +176,6 @@ span {
                     <li class="nav-item"><a class="nav-link" href="admindashboardmark.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminprofilemark.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminlivechatjosell.html"><i class="fas fa-user"></i><span>Team LiveChat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminmanageproducts.html"><i class="fas fa-user" active></i><span>Manage Products</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmanageorders.html"><i class="fas fa-user"></i><span>Manage Orders</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmanageusers.html"><i class="fas fa-user"></i><span>Manage Accounts</span></a></li>
                 </ul>
@@ -210,11 +235,15 @@ span {
                     </div>
                 </nav>
                 <!----------MANAGE PRODUCTS------------>
+
                 <section>
-                    <h1>Products</h1>
+                    <div class="container bg-light">
+                        <h1>Orders</h1>
+                        <ul id="purchase-list">
+                    </div>
+                    
                 </section>
-                  
-                  
+           
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -223,5 +252,6 @@ span {
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="./Firebase JS-livechat/firebaselivechatmark.js"></script>
+    <script src="./JS-admindashboard/adminordermanagement.js"></script>
 </body>
 </html>

@@ -53,7 +53,6 @@
   }
   
   
-  
   /*remove items second part*/
   function removeCartItem(event) {
     var buttonClicked = event.target;
@@ -72,8 +71,6 @@
     updateCartTotal();
     updateItemsTotal();
   }
-  
-  
   
   function addToCartClicked(event) {
     var button = event.target;
@@ -120,8 +117,6 @@
       .getElementsByClassName("cart-quantity-input")[0]
       .addEventListener("change", quantityChanged);
   }
-  
-  
    
   function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName("cart-items")[0];
@@ -141,8 +136,6 @@
     document.getElementsByClassName("cart-total-price")[0].innerText =
       "₱" + total;
   }
-  
-  
   
   function updateItemsTotal() {
     var cartItemContainer = document.getElementsByClassName("cart-items")[0];
