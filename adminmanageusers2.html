@@ -135,10 +135,48 @@ span {
 #clear-btn:hover {
   background-color: #c82333;
 }
+
+#user-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #user-table th, #user-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    #user-table th {
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
+    }
+
+    #user-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #user-table tr:hover {
+      background-color: #ddd;
+    }
+
+    .delete-button {
+      background-color: #f44336;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
     </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="displayUsers()">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
@@ -149,7 +187,7 @@ span {
                 <ul class="navbar-nav" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link" href="admindashboardmark.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminprofilemark.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="adminlivechatmark.html"><i class="fas fa-user"></i><span>Team LiveChat</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminlivechatmark.html"><i class="fas fa-user"></i><span>Team LiveChat</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmanageorders2.html"><i class="fas fa-user"></i><span>Manage Orders</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmanageusers2.html"><i class="fas fa-user"></i><span>Manage Accounts</span></a></li>
                 </ul>
@@ -199,7 +237,7 @@ span {
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Mark Joeneil</span><img class="border rounded-circle img-profile" src="./images/avatar1.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">admin</span><img class="border rounded-circle img-profile" src="./images/avatar1.jpeg"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
@@ -208,26 +246,68 @@ span {
                         </ul>
                     </div>
                 </nav>
+                <!----------MANAGE PRODUCTS------------>
                 <section>
-                    <div>
-                        <h1 class="text-center">Team Live Chat</h1>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div id="chat-display">
-                                <!-- chat messages will be displayed here -->
-                              </div>
-                              <form id="chat-form">
-                                <input type="text" id="name-input" placeholder="Your name" value="Mark" disabled>
-                                <input type="text" id="message-input" placeholder="Type your message">
-                                <button type="submit">Send</button>   <button id="clear-btn">Clear</button>
-                              </form>
-                              
-                        </div>
-                    </div>
+                     <h1 class="text-center">Users Management</h1>
+                        <table class="container" id="user-table">
+                            <thead>
+                            <tr class="text-dark">
+                                <th>username</th>
+                                <th>email</th>
+                                <th>password</th>
+                            </tr>
+                            </thead>
+                            <tbody class="pt-5 pb-5">
+                            <!-- User data rows will be inserted here -->
+                            </tbody>
+                        </table>
                 </section>
                   
-                  
+    <script>
+       function displayUsers() {
+  // Get the user data from localStorage
+  const userData = JSON.parse(localStorage.getItem('users'));
+
+  // Get a reference to the table element
+  const table = document.getElementById('user-table');
+
+  // Clear any existing rows from the table
+  table.innerHTML = '';
+
+  // Create a row for each user and add it to the table
+  userData.forEach(user => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${user.username}</td>
+      <td>${user.email}</td>
+      <td>${user.password}</td>
+      <td><button class="delete-button button-24" onclick="deleteUser(${user.id})">Delete</button></td>
+    `;
+    table.appendChild(row);
+  });
+}
+
+function deleteUser(id) {
+  // Get the user data from localStorage
+  const userData = JSON.parse(localStorage.getItem('users'));
+
+  // Find the index of the user to delete
+  const index = userData.findIndex(user => user.id === id);
+
+  // Remove the user data from the array
+  userData.splice(index, 1);
+
+  // Save the updated user data to localStorage
+  localStorage.setItem('users', JSON.stringify(userData));
+
+  // Refresh the table to show the updated user data
+  displayUsers();
+}
+
+// Call the displayUsers() function to populate the table
+displayUsers();
+
+    </script>              
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -235,6 +315,5 @@ span {
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="./Firebase JS-livechat/firebaselivechatmark.js"></script>
 </body>
 </html>
