@@ -135,10 +135,48 @@ span {
 #clear-btn:hover {
   background-color: #c82333;
 }
+
+#user-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #user-table th, #user-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    #user-table th {
+      background-color: #f2f2f2;
+      color: #333;
+      font-weight: bold;
+    }
+
+    #user-table tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #user-table tr:hover {
+      background-color: #ddd;
+    }
+
+    .delete-button {
+      background-color: #f44336;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
     </style>
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="displayUsers()">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
@@ -210,10 +248,66 @@ span {
                 </nav>
                 <!----------MANAGE PRODUCTS------------>
                 <section>
-                    <h1>Products</h1>
+                     <h1 class="text-center">Users Management</h1>
+                        <table class="container" id="user-table">
+                            <thead>
+                            <tr class="text-dark">
+                                <th>username</th>
+                                <th>email</th>
+                                <th>password</th>
+                            </tr>
+                            </thead>
+                            <tbody class="pt-5 pb-5">
+                            <!-- User data rows will be inserted here -->
+                            </tbody>
+                        </table>
                 </section>
                   
-                  
+    <script>
+       function displayUsers() {
+  // Get the user data from localStorage
+  const userData = JSON.parse(localStorage.getItem('users'));
+
+  // Get a reference to the table element
+  const table = document.getElementById('user-table');
+
+  // Clear any existing rows from the table
+  table.innerHTML = '';
+
+  // Create a row for each user and add it to the table
+  userData.forEach(user => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${user.username}</td>
+      <td>${user.email}</td>
+      <td>${user.password}</td>
+      <td><button class="delete-button" onclick="deleteUser(${user.id})">Delete</button></td>
+    `;
+    table.appendChild(row);
+  });
+}
+
+function deleteUser(id) {
+  // Get the user data from localStorage
+  const userData = JSON.parse(localStorage.getItem('users'));
+
+  // Find the index of the user to delete
+  const index = userData.findIndex(user => user.id === id);
+
+  // Remove the user data from the array
+  userData.splice(index, 1);
+
+  // Save the updated user data to localStorage
+  localStorage.setItem('users', JSON.stringify(userData));
+
+  // Refresh the table to show the updated user data
+  displayUsers();
+}
+
+// Call the displayUsers() function to populate the table
+displayUsers();
+
+    </script>              
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
@@ -221,6 +315,5 @@ span {
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script src="./Firebase JS-livechat/firebaselivechatmark.js"></script>
 </body>
 </html>
