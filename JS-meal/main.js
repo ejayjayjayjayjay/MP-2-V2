@@ -161,6 +161,7 @@ window.onload = function(){
 
         const changeWeekButton = document.createElement('button');
         changeWeekButton.classList.add('button');
+        changeWeekButton.classList.add('button-74');
         changeWeekButton.classList.add('nav');
         changeWeekButton.classList.add('transition');
         changeWeekButton.dataset.firstDay = changeWeek;
@@ -672,6 +673,7 @@ window.onload = function(){
     HTMLDivElement.prototype.addMainButton = function(section){
         const mainButton = document.createElement('button');
         mainButton.classList.add('button');
+        mainButton.classList.add('button-74');
         mainButton.classList.add('nav');
         mainButton.classList.add('main');
         mainButton.classList.add('transition')
@@ -791,7 +793,7 @@ window.onload = function(){
     }
     function loadDummyMealTypeData(){
         let dummyTypes = [
-            'Pasta', 'Comfort', 'Vegetarian', 'Poultry'
+            'Pork', 'Beef', 'Chicken', 'Pasta'
         ]
 
         dummyTypes.forEach(type => {
@@ -800,7 +802,7 @@ window.onload = function(){
     }
     function loadDummyMealSeasonData(){
         let dummySeasons = [
-            'Year-round', 'Cold Weather', 'Warm Weather'
+            'Breakfast', 'Lunch', 'Dinner'
         ]
 
         dummySeasons.forEach(season => {
