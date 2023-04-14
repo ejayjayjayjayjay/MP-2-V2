@@ -995,6 +995,28 @@ display: none;
   height: 34rem;
 }
 
+@media screen and (max-width: 390px) {
+    .show-cart {
+        width: 26rem;
+        padding: 2rem 1.5rem;
+        height: 34rem;
+      }
+  }
+@media screen and (max-width: 375px) {
+    .show-cart {
+        width: 24rem;
+        padding: 2rem 1.5rem;
+        height: 34rem;
+      }
+  }
+@media screen and (max-width: 414px) {
+    .show-cart {
+        width: 26rem;
+        padding: 2rem 1.5rem;
+        height: 34rem;
+      }
+  }
+
 .cart-row {
   transition: all 2s ease-in-out;
   display: flex;
