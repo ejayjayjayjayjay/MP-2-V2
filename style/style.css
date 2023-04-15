@@ -2,6 +2,15 @@
 
 /* card */
 
+/***** fix the aos white space bug*****/
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
+/***** Index *****/
+
 body {
   font-family: "Oxygen", sans-serif;
   color: #050505;
