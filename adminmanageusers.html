@@ -161,19 +161,6 @@ span {
     #user-table tr:hover {
       background-color: #ddd;
     }
-
-    .delete-button {
-      background-color: #f44336;
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
     </style>
 </head>
 
@@ -282,7 +269,7 @@ span {
       <td>${user.username}</td>
       <td>${user.email}</td>
       <td>${user.password}</td>
-      <td><button class="delete-button button-74" onclick="deleteUser(${user.id})">Delete</button></td>
+      <td><button class="button-74" onclick="deleteUser(${user.id})">Delete</button></td>
     `;
     table.appendChild(row);
   });
